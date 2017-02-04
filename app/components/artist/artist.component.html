@@ -1,0 +1,17 @@
+<!--component html goes here -->
+<div *ngIf="artist">
+    <header>
+        <div *ngIf="artist.images">
+            <img src="{{artist.images[0].url}}" class="artist-thumb img-circle" alt="">
+        </div>
+        <h1>{{artist.name}}</h1>
+        <p *ngIf="artist.genres">
+            <strong>
+                Genres: 
+            </strong>
+            <span *ngFor="let genre of artist.genres">
+                {{genre}}
+            </span>
+        </p>
+    </header>
+</div>
